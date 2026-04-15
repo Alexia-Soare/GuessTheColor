@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Guess the Color</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-card">
+
+        <header class="game-header">
+            <div class="title-block">
+                <p class="title-sub">Guess the</p>
+                <h1 class="title-main">Color</h1>
+            </div>
+            <div class="score-block">
+                <p class="score-label">SCORE</p>
+                <p class="score-value" id="scoreValue">0</p>
+                <p class="score-bonus" id="scoreBonus"></p>
+            </div>
+        </header>
+
+        <section class="color-arena">
+            <div class="swatch-pair">
+                <div class="swatch-block">
+                    <div class="swatch" id="targetSwatch"></div>
+                    <p class="swatch-label">Target</p>
+                </div>
+                <div class="vs-col">
+                    <span class="vs-text">VS</span>
+                </div>
+                <div class="swatch-block">
+                    <div class="swatch" id="guessSwatch"></div>
+                    <p class="swatch-label">Your Mix</p>
+                </div>
+            </div>
+            <div class="result-banner" id="resultBanner"></div>
+        </section>
+
+        <section class="controls">
+            <div class="slider-row">
+                <span class="ch-label r-label">R</span>
+                <input class="slider slider-r" type="range" min="0" max="255" value="128" id="slider1">
+                <span class="ch-value" id="r-value">128</span>
+            </div>
+            <div class="slider-row">
+                <span class="ch-label g-label">G</span>
+                <input class="slider slider-g" type="range" min="0" max="255" value="128" id="slider2">
+                <span class="ch-value" id="g-value">128</span>
+            </div>
+            <div class="slider-row">
+                <span class="ch-label b-label">B</span>
+                <input class="slider slider-b" type="range" min="0" max="255" value="128" id="slider3">
+                <span class="ch-value" id="b-value">128</span>
+            </div>
+            <button class="action-btn" id="guessButton" onclick="handleClick()">Guess</button>
+        </section>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

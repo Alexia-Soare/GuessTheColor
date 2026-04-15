@@ -81,7 +81,7 @@ function guess() {
     totalScore += score;
     document.getElementById("scoreValue").textContent = totalScore;
 
-    // Glow the guess swatch after reveal
+   
     document.getElementById("guessSwatch").style.boxShadow =
         `0 8px 36px rgba(${rg}, ${gg}, ${bg}, 0.45)`;
 }
@@ -90,7 +90,7 @@ function showBonus(text) {
     const bonus = document.getElementById("scoreBonus");
     bonus.textContent = text;
     bonus.className = "score-bonus";
-    void bonus.offsetWidth; // reflow to restart animation
+    void bonus.offsetWidth; 
     bonus.classList.add("pop");
 }
 

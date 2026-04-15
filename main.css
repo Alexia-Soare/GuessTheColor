@@ -140,7 +140,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 24px; /* aligns with swatch center, accounting for label */
+    padding-bottom: 24px; 
     flex-shrink: 0;
 }
 
